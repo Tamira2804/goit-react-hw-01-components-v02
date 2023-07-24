@@ -1,5 +1,5 @@
-import React from 'react';
 import Statselement from './Statselement';
+import PropTypes from 'prop-types';
 
 const Statistics = props => {
   const { title, stats } = props;
@@ -22,4 +22,11 @@ const Statistics = props => {
   );
 };
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array,
+  statsEl: PropTypes.shape({
+    id: PropTypes.string,
+  }),
+};
 export default Statistics;
