@@ -11,8 +11,8 @@ const Statselement = stats => {
 };
 
 Statselement.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 export default Statselement;

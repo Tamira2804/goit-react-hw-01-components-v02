@@ -23,10 +23,11 @@ const Statistics = props => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.array,
-  statsEl: PropTypes.shape({
-    id: PropTypes.string,
-  }),
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
 };
 export default Statistics;
