@@ -1,6 +1,7 @@
 import Statselement from '../StatsElement/Statselement';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
+import { getRandomColor } from 'utils/getRandomColor';
 
 const Statistics = props => {
   const { title, stats } = props;
@@ -11,10 +12,15 @@ const Statistics = props => {
 
       <ul className={css.statlist}>
         {stats.map(statsEl => (
-          <li key={statsEl.id} className={css.item}>
+          <li
+            key={statsEl.id}
+            className={css.item}
+            style={{ backgroundColor: getRandomColor() }}
+          >
             <Statselement
               label={statsEl.label}
               percentage={statsEl.percentage}
+              color={getRandomColor()}
             />
           </li>
         ))}
