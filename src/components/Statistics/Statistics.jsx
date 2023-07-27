@@ -1,16 +1,17 @@
-import Statselement from './Statselement';
+import Statselement from '../StatsElement/Statselement';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 const Statistics = props => {
   const { title, stats } = props;
 
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <section className={css.statistics}>
+      <h2 className={css.title}>{title}</h2>
 
-      <ul className="stat-list">
+      <ul className={css.statlist}>
         {stats.map(statsEl => (
-          <li key={statsEl.id} className="item">
+          <li key={statsEl.id} className={css.item}>
             <Statselement
               label={statsEl.label}
               percentage={statsEl.percentage}
