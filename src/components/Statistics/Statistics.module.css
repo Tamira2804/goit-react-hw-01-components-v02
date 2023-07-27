@@ -2,13 +2,14 @@
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   text-align: center;
 
+  color: rgb(156, 156, 156);
+  font-size: 18px;
   background-color: #fff;
   box-shadow: 4px 4px 4px 0px rgba(180, 184, 194, 0.75);
   border-radius: 8px;
-  color: rgb(156, 156, 156);
-  font-size: 18px;
 }
 .title {
   color: #111;
@@ -28,7 +29,7 @@
 
 .item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 96px));
+  grid-template-columns: repeat(auto-fit, minmax(50px, auto));
   gap: 12px;
   padding: 16px;
 
