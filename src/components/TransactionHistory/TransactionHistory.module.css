@@ -1,0 +1,30 @@
+.transaction-history {
+  width: 100%;
+  margin-bottom: 50px;
+
+  border-spacing: 1px;
+  box-shadow: 4px 4px 4px 0px rgba(180, 184, 194, 0.75);
+  border: 1px solid rgb(230, 234, 240);
+  border-radius: 4px;
+}
+
+.transaction-history th {
+  background-color: rgb(118, 224, 248);
+  color: white;
+  padding: 16px;
+}
+
+.transaction-history tr:nth-child(even) {
+  background-color: rgb(239, 241, 249);
+}
+
+.transaction-history tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Стилі для комірок таблиці */
+.transaction-history td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
