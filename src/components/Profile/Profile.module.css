@@ -1,21 +1,14 @@
 .profile {
-  height: 100%;
-  padding: 50px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 
-  background-color: rgb(230, 234, 240);
-  color: rgb(156, 156, 156);
-  font-size: 18px;
-}
-
-.description {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 480px;
 
-  margin-left: auto;
-  margin-right: auto;
-
+  color: rgb(156, 156, 156);
   background-color: #fff;
   box-shadow: 4px 4px 4px 0px rgba(180, 184, 194, 0.75);
   border: 1px solid rgb(230, 234, 240);
@@ -68,12 +61,11 @@
 }
 
 .item {
-  width: 33%;
-  padding: 10px 5px;
-
-  display: flex;
-  text-align: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+  gap: 12px;
+  padding: 16px;
+  border-spacing: 1px;
 }
 
 .label {
