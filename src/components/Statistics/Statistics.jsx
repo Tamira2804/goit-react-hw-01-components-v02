@@ -11,6 +11,7 @@ const Statistics = ({ title, stats }) => {
       <ul className={css.statlist}>
         {stats.map(statsEl => (
           <Statselement
+            key={statsEl.id}
             label={statsEl.label}
             percentage={statsEl.percentage}
             color={getRandomColor()}
@@ -23,6 +24,10 @@ const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  friends: PropTypes.arrayOf(PropTypes.object),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
 export default Statistics;
