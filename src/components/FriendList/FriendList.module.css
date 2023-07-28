@@ -8,21 +8,3 @@
   gap: 12px;
   padding: 12px;
 }
-
-.item {
-  min-width: 200px;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-
-  background-color: #fff;
-  box-shadow: 4px 4px 4px 0px rgba(180, 184, 194, 0.75);
-  border-radius: 4px;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  padding: 16px;
-}
