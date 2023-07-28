@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
-function Profile(props) {
-  const { avatar, username, tag, location, stats } = props;
-  const { followers, views, likes } = stats;
-
+function Profile({
+  avatar,
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) {
   return (
     <div className={css.profile}>
       <div className={css.description}>

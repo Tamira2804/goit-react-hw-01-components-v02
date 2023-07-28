@@ -6,24 +6,19 @@ function FriendList({ friends }) {
   return (
     <ul className={css.friendlist}>
       {friends.map(friend => (
-        <li key={friend.id} className={css.item}>
-          <FriendListItem
-            avatar={friend.avatar}
-            name={friend.name}
-            isOnline={friend.isOnline}
-          />
-        </li>
+        <FriendListItem
+          id={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+        />
       ))}
     </ul>
   );
 }
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    })
-  ),
+  friends: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default FriendList;

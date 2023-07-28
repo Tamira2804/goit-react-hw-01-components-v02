@@ -22,7 +22,6 @@
   background-color: #fff;
 }
 
-/* Стилі для комірок таблиці */
 .transaction-history td {
   text-align: center;
   border: 1px solid #ddd;

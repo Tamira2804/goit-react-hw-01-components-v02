@@ -26,12 +26,3 @@
   display: flex;
   justify-content: center;
 }
-
-.item {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, auto));
-  gap: 12px;
-  padding: 16px;
-
-  color: #fff;
-}

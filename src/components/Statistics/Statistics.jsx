@@ -3,26 +3,18 @@ import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 import { getRandomColor } from 'utils/getRandomColor';
 
-const Statistics = props => {
-  const { title, stats } = props;
-
+const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.statlist}>
         {stats.map(statsEl => (
-          <li
-            key={statsEl.id}
-            className={css.item}
-            style={{ backgroundColor: getRandomColor() }}
-          >
-            <Statselement
-              label={statsEl.label}
-              percentage={statsEl.percentage}
-              color={getRandomColor()}
-            />
-          </li>
+          <Statselement
+            label={statsEl.label}
+            percentage={statsEl.percentage}
+            color={getRandomColor()}
+          />
         ))}
       </ul>
     </section>
@@ -30,11 +22,7 @@ const Statistics = props => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
+  title: PropTypes.string,
+  friends: PropTypes.arrayOf(PropTypes.object),
 };
 export default Statistics;
